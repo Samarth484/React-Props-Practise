@@ -1,5 +1,6 @@
 import React from "react";
-
+import Avatar from "./Avatar";
+import Information from "./Information";
 function Card(props) {
   return (
     <div>
@@ -7,14 +8,10 @@ function Card(props) {
       <div className="card">
         <div className="top">
           <h2 className="name" >{props.heading}</h2>
-          <img class="circle-img"
-            src={props.img}
-            alt="avatar_img"
-          />
+          <Avatar img={props.img}></Avatar>
         </div>
         <div className="bottom ">
-          <p class="info">{props.tel}</p>
-          <p class="info">{props.email}</p>
+          <Information tel={props.tel} email={props.email}> </Information>
         </div>
       </div>
     </div>
@@ -25,13 +22,16 @@ function App() {
   return (
     <div>
       <h1 className="heading">My Contacts</h1>
-      <Card heading="Samarth" img="https://pbs.twimg.com/profile_images/1274790656817291264/j2bx8w25_400x400.jpg" tel="+123 456 789" email="samarth@gmail.com
+      <Avatar img="https://pbs.twimg.com/profile_images/1274790656817291264/j2bx8w25_400x400.jpg"></Avatar>
+      <Card heading="Shreya" img="https://media-exp1.licdn.com/dms/image/C5603AQH7r7JJqn-vXw/profile-displayphoto-shrink_400_400/0?e=1598486400&v=beta&t=CJxiSTV1aMZ1k8dGe6YxBmLLr8zbk99eyYDKnl5okFk"
+        tel="+91 99999 99999"
+        email="shreya@gmail.com
 
 " >
 
       </Card>
 
-      
+
       <Card heading="Beyonce" img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg" tel="+123 456 789" email="b@beyonce.com
 
 " >
